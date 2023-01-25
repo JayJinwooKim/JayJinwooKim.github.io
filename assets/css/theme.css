@@ -6,7 +6,7 @@
 * URL:			https://themetorium.net/
 *
 * Body Font (global): 'Poppins', sans-serif;
-* Secondary Font: 'Noto Serif JP', serif;
+* Secondary Font: 'Noto Serif KR', serif;
 -------------------------------------------------------------------- */
 
 
@@ -235,7 +235,7 @@ body {
 .tt-scrolling-text,
 #blog-list.bli-compact .bli-info::before,
 .blog-interactive-item::before {
-	font-family: 'Noto Serif JP', serif;
+	font-family: 'Noto Serif KR', serif;
 }
 
 
