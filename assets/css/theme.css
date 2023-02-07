@@ -9625,6 +9625,10 @@ body:not(.tt-boxed) .tt-footer-inner,
 #bank_num:foucs {  outline: none !important; }
 
 .tt-col-lg-8 .text-gray p {font-size:17px; letter-spacing: -1px;}
+@media (max-width: 780px){
+	.bank_wrap {padding:25% 0 15% 0;}
+}
+
 .bank {font-size:17px;}
 .bank > p {margin-bottom:5px;}
 .bank.mb {margin-bottom:40px;}
