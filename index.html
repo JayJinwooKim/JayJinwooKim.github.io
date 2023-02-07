@@ -16,6 +16,8 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Download Tank - Creative Portfolio Showcase HTML Website Template that comes with rich features and well-commented code. Made by Themetorium.">
 		<meta name="author" content="themetorium.net">
+		<meta property="og:image" content="og_img.jpg">
+		<meta property="og:description" content="Youngran x Jinwoo 모바일 청첩장">
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,6 +43,9 @@
 		<!-- Template master CSS -->
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
+
+		<!-- 라이브러리 CDN -->
+		<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=y27g8zf9dw"></script>
 
 	</head>
 
@@ -146,8 +151,8 @@
 												<!-- Begin submenu (submenu master)
 												==================================== -->
 												<li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="#">인삿말</a>
+													<div class="tt-ol-submenu-trigger menu_navi">
+														<a href="#" class="navi01">인삿말</a>
 														<div class="tt-ol-submenu-caret-wrap">
 															
 														</div> <!-- /.tt-ol-submenu-caret-wrap -->
@@ -169,8 +174,8 @@
 												<!-- Begin submenu (submenu master)
 												==================================== -->
 												<li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="#">마음전하기</a>
+													<div class="tt-ol-submenu-trigger menu_navi">
+														<a href="#" class="navi02">마음전하기</a>
 														<div class="tt-ol-submenu-caret-wrap">
 														</div> <!-- /.tt-ol-submenu-caret-wrap -->
 													</div> 
@@ -180,8 +185,8 @@
 												<!-- Begin submenu (submenu master)
 												==================================== -->
 												<li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="#">장소안내</a>
+													<div class="tt-ol-submenu-trigger menu_navi">
+														<a href="#" class="navi03">장소안내</a>
 														<div class="tt-ol-submenu-caret-wrap">
 														</div> <!-- /.tt-ol-submenu-caret-wrap -->
 													</div> 
@@ -249,11 +254,11 @@
 							-->
 							<div class="ph-caption">
 								<div class="ph-categories ph-appear">
-									<div class="ph-category" style="">The wedding of</div>
+									<div class="ph-category serif">The wedding of</div>
 									<!-- <div class="ph-category">Varia</div> -->
 								</div> <!-- /.ph-categories -->
 
-								<h2 class="ph-caption-title ph-appear">Youngran<br>&<br>Jinwoo</h2> <!-- You can use <br class="hide-from-lg"> to break a text line if needed -->
+								<h2 class="ph-caption-title ph-appear serif">Youngran<br>&<br>Jinwoo</h2> <!-- You can use <br class="hide-from-lg"> to break a text line if needed -->
 								<!-- <h4 class="ph-caption-subtitle ph-appear">Subtitle</h4> -->
 							</div> 
 							<!-- End page header caption -->
@@ -267,26 +272,25 @@
 								<ul>
 									<li>
 										<div class="pi-list-heading">.</div>
-										<div class="pi-list-cont">.</div>
+										<div class="pi-list-cont"></div>
 									</li>
 									<li>
 										<div class="pi-list-heading">.</div>
-										<div class="pi-list-cont">.</div>
+										<div class="pi-list-cont"></div>
 									</li>
 									<li>
 										<div class="pi-list-heading">.</div>
-										<div class="pi-list-cont">.</div> 
+										<div class="pi-list-cont"></div> 
 									</li>
 									<li>
-										<div class="pi-list-heading">2023.4.8 Sat 5:00 PM</div>
+										<div class="pi-list-date">2023.4.8 Sat 5:00 PM</div>
 										<div class="pi-list-cont">연세대학교 알렌관</div>
 									</li>
 								</ul>
 							</div>
 							<!-- End project info list -->
-						
 						</div> <!-- /.page-header-inner -->
-
+					
 						<!-- Begin scroll down circle (you can change "data-offset" to set scroll top offset) 
 						============================== -->
 						<a href="#page-content" class="scroll-down-circle" data-offset="30">
@@ -332,6 +336,7 @@
 										* Use class "tt-heading-center" to align tt-Heading to center.
 										* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
 										-->
+										
 										<div class="tt-heading tt-heading-xsm margin-bottom-60 anim-fadeinup">
 											<h2 class="tt-heading-title">김진우 남영란, 결혼합니다.</h2>
 											<!-- <h3 class="tt-heading-subtitle text-gray">Subtitle</h3> -->
@@ -363,7 +368,6 @@
 						============================ 
 						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 						-->
-
 						<div class="tt-section">
 							<div class="tt-heading tt-heading-xsm anim-fadeinup">
 									<h2 class="tt-heading-title">Photos</h2>
@@ -381,8 +385,8 @@
 									<figure>
 										<a href="single-project-1.html">
 										<img class="anim-image-parallax tt-lazy" src="assets/img/page-header/photos_header.jpg" data-src="assets/img/page-header/photos-header.jpg" alt="image">
-										<figcaption>
-										More photos	
+										<figcaption class="more_p">
+										사진보기	
 										</figcaption></a>
 									</figure>
 								</div> 
@@ -399,7 +403,7 @@
 						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 						-->
 						<div class="tt-section padding-top-xlg-100 padding-bottom-xlg-100 padding-left-sm-3-p padding-right-sm-3-p">
-							<div class="tt-section-inner tt-wrap max-width-900">
+							<div class="tt-section-inner tt-wrap ">
 
 								<!-- Begin tt-Heading 
 								====================== 
@@ -430,11 +434,13 @@
 											</div>
 										</div> <!-- /.tt-accordion-heading -->
 										<div class="tt-accordion-content max-width-800">
-											<p>카카오뱅크 3333-01-2000000 김진우</p>
-											<p>복사하기</p>
-											<div class="tt-btn tt-btn-link">
-												<a href="dummy-page.html" data-hover="Read More"></a>
+											<div class="bank">
+												<p>카카오뱅크 <input id="bank_num" value="3333-01-2000000" readonly> 김진우</p>
+												<p class="clip_btn">복사하기</p>
 											</div>
+											<!--<div class="tt-btn tt-btn-link">
+												<a href="dummy-page.html" data-hover="Read More"></a>
+											</div>-->
 										</div> <!-- /.tt-accordion-content -->
 									</div> <!-- /.tt-accordion-item -->
 									
@@ -445,22 +451,29 @@
 											<div class="tt-accordion-caret-wrap">
 												<div class="tt-accordion-caret magnetic-item"></div>
 											</div>
+											<!--<div class="tt-btn tt-btn-link">
+												<a href="dummy-page.html" data-hover="Read More"></a>
+											</div>-->
 										</div> <!-- /.tt-accordion-heading -->
 										<div class="tt-accordion-content max-width-800">
-											<p>카카오뱅크 3333-01-2000000 남영란</p>
-											<p>복사하기</p>
-											<p>신한은행 3333-01-2000000 남영현</p>
-											<p>복사하기</p>
-											<div class="tt-btn tt-btn-link">
-												<a href="dummy-page.html" data-hover="Read More"></a>
+											<div class="bank mb">
+												<p>카카오뱅크 <input id="bank_num" value="3333-01-2000000" readonly> 남영란</p>
+												<p class="clip_btn">복사하기</p>
 											</div>
+											<div class="bank">
+												<p>신한은행  <input id="bank_num" value="3333-01-2000000" readonly> 남영현</p>
+												<p class="clip_btn">복사하기</p>
+											</div>
+											<!--<div class="tt-btn tt-btn-link">
+												<a href="dummy-page.html" data-hover="Read More"></a>
+											</div>-->
 										</div> <!-- /.tt-accordion-content -->
 									</div> <!-- /.tt-accordion-item -->
 
 
 								</div>
 								<!-- End accordion -->
-
+								
 							</div> <!-- /.tt-section-inner -->
 						</div>
 						<!-- End tt-section -->
@@ -479,33 +492,38 @@
 								* Use class "tt-pn-scroll" to enable hover title scroll. Note: If "tt-pn-hover-title" text is wider than "tt-pn-link" then it scrolls by default. The longer the text, the faster it scrolls.
 								-->
 								<div class="tt-page-nav tt-pn-scroll">
-									<a href="single-project-8.html" class="tt-pn-link anim-fadeinup">
+									<!--<a href="single-project-8.html" class="tt-pn-link anim-fadeinup">
 										<div class="tt-pn-title">오시는 길</div>
 										<div class="tt-pn-hover-title">연세대학교 알렌관</div>
-									</a> <!-- /.tt-pn-link -->
+									</a>--> <!-- /.tt-pn-link -->
 
-									<div class="tt-pn-subtitle anim-fadeinup"><a href="kakaomap://place?id=8005878" target="_blank">다음 지도 앱에서 보기</a></div>
-									<div class="tt-pn-subtitle anim-fadeinup"><a href="nmap://search?query=알렌관&appname=www.april8.wedding" target="_blank">네이버 지도 앱에서 보기</a></div>
-									<div class="tt-pn-subtitle anim-fadeinup">
-									<a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=N203a2FhY2NnbXVzMmMwMGcxNDMwbWhrb2MgamF5eXdhbGtAbQ&amp;tmsrc=jayywalk%40gmail.com">캘린더에 추가하기</a>
+									<div class="tt-pn-link anim-fadeinup">
+										<div class="tt-pn-title">오시는 길</div>
+										<div class="tt-pn-hover-title">연세대학교 알렌관</div>
 									</div>
-									
+
+									<div class="map_btn">
+										<div class="tt-pn-subtitle anim-fadeinup"><a href="kakaomap://place?id=8005878" target="_blank"><img src="assets/img/daum_map.png" class="map_icon"></a></div>
+										<div class="tt-pn-subtitle anim-fadeinup"><a href="nmap://search?query=알렌관&appname=www.april8.wedding" target="_blank"><img src="assets/img/naver_map.png" class="map_icon"></a></div>
+										<div class="tt-pn-subtitle anim-fadeinup">
+											<a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=N203a2FhY2NnbXVzMmMwMGcxNDMwbWhrb2MgamF5eXdhbGtAbQ&amp;tmsrc=jayywalk%40gmail.com"><img src="assets/img/calendar.png" class="calendar"></a>
+										</div>
 									</div>
-									<div id="map" 
-									style="width:100%;height:200px;" ></div>
-									<script>
-									var mapOptions = {
-									    center: new naver.maps.LatLng(37.564494, 126.942348),
-									    zoom: 14
-									};
-
-									var marker = new naver.maps.Marker({
-									    position: new naver.maps.LatLng(37.564494, 126.942348),
-									    map: map
-									});
-
-									var map = new naver.maps.Map('map', mapOptions);
-									</script>
+								</div>
+								<div id="map" style="width:100%;height:200px;" ></div>
+								<script>
+								var mapOptions = {
+									center: new naver.maps.LatLng(37.564494, 126.942348),
+									zoom: 14
+								};
+								
+								var marker = new naver.maps.Marker({
+									position: new naver.maps.LatLng(37.564494, 126.942348),
+									map: map
+								});
+								
+								var map = new naver.maps.Map('map', mapOptions);
+								</script>
 									<!-- Use if destination page contains page header image -->
 									<!-- <div class="tt-pn-image">
 										<img src="assets/img/portfolio/portfolio-7.jpg" alt="image">
@@ -526,7 +544,7 @@
 													<div class="tt-accordion-caret magnetic-item"></div>
 												</div>
 											</div> <!-- /.tt-accordion-heading -->
-											<div class="tt-accordion-content max-width-800">
+											<div class="tt-accordion-content max-width-800 map_info">
 												<p>주소 : 서울시 서대문구 연세로 50 (02-2123-4101)</p>
 
 												<p>대중교통
@@ -542,9 +560,9 @@
 연세대 어린이생활지도연구원 (지상)
 연대본관 주차장 이용시 도보로 15분 소요
 </p>
-												<div class="tt-btn tt-btn-link">
+												<!--<div class="tt-btn tt-btn-link">
 													<a href="dummy-page.html" data-hover="Read More"></a>
-												</div>
+												</div>-->
 											</div> <!-- /.tt-accordion-content -->
 										</div> <!-- /.tt-accordion-item -->
 										
@@ -625,7 +643,29 @@
 
 		<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?govClientId=y27g8zf9dw"></script>
 
+		<!-- MAIN SCRIPT -->
+		<script>
+			/* MENU navi */
 
+			/* 계좌 클립보드 복사 */
+			$(function () {
+				$('.clip_btn').click(function() {
+			
+					let copyText = $(this).prev().children();
+					copyText.select();
+					
+					let copy = document.execCommand('copy');
+					alert("복사 되었습니다.");
+				});
+			});
+
+			$(window).scroll(function () { 
+				var scrollValue = $('.scroll-container').scrollTop(); 
+				console.log(scrollValue); 
+			});
+
+
+		</script>
 
 	</body>
 

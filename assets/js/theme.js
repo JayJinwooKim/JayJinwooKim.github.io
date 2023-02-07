@@ -221,8 +221,8 @@
 			bodyScrollBar.addListener(({ offset }) => {  
 				scrollPositionX = offset.x;
 				scrollPositionY = offset.y;
+				
 			});
-
 			bodyScrollBar.setPosition(0, 0);
 			bodyScrollBar.track.xAxis.element.remove();
 
@@ -235,7 +235,7 @@
 					return bodyScrollBar.scrollTop;
 				}
 			});
-
+		
 			// when smooth scroller updates, tell ScrollTrigger to update() too. 
 			bodyScrollBar.addListener(ScrollTrigger.update);
 
@@ -858,16 +858,33 @@
 
 			// On menu link click
 			$(".tt-overlay-menu a, .tt-logo a")
-			.not('[target="_blank"]') // omit from selection
-			.not('[href^="#"]') // omit from selection
-			.not('[href^="mailto"]') // omit from selection
-			.not('[href^="tel"]') // omit from selection
 			.on('click', function() {
-				gsap.set("#content-wrap, .ttgr-cat-nav", { autoAlpha: 0 }); // Hide before timeline
-				var tl_olMenuClick = gsap.timeline();
-					 tl_olMenuClick.to(".tt-ol-menu-list > li", { duration: 0.4, y: -80, autoAlpha: 0, stagger: 0.05, ease: Power2.easeIn });
-			});
 
+				$("body").removeClass("olm-toggle-no-click"); 
+				$("html").toggleClass("tt-no-scroll");
+				$("body").toggleClass("tt-ol-menu-open");	
+				var tl_olMenuOut = gsap.timeline({
+					onComplete: function() { 
+						$("body").removeClass("olm-toggle-no-click"); 
+					}
+				});
+					 tl_olMenuOut.to(".tt-ol-menu-list > li", { duration: 0.4, y: -80, autoAlpha: 0, stagger: 0.05, ease: Power2.easeIn });
+					 tl_olMenuOut.to(".tt-overlay-menu", { duration: 0.4, autoAlpha: 0, clearProps:"all" }, "+=0.2");
+					 tl_olMenuOut.set(".tt-ol-menu-list > li", { clearProps:"all" }); // clearProps only
+	
+					 // Show sliding sidebar
+					 if ($(".tt-sliding-sidebar-wrap").length) {
+						 gsap.to(".tt-sliding-sidebar-trigger", { duration: 1, autoAlpha: 1, ease: Expo.easeOut, clearProps:"all" }, "-=0.3");
+					 }
+	
+				// Close open submenus
+				setTimeout(function () {
+					$(".tt-ol-submenu").slideUp(350);
+					$(".tt-ol-submenu-trigger").removeClass("tt-ol-submenu-open");
+				}, 500);
+
+			});
+			
 			// Hide sliding sidebar
 			if ($(".tt-sliding-sidebar-wrap").length) {
 				gsap.to(".tt-sliding-sidebar-trigger", { duration: 1, autoAlpha: 0, ease: Expo.easeOut });
@@ -912,21 +929,8 @@
 	});
 
 	// Open submenu if link href contains #
-	$(".tt-ol-submenu-trigger > a").on("click", function() {
-		if ($(this).is('[href^="#"]')) {
-			var $this = $(this).parent();
-			if ($this.hasClass("tt-ol-submenu-open")) {
-				$this.removeClass("tt-ol-submenu-open");
-				$this.next().slideUp(350);
-			} else {
-				$this.parent().parent().find(".tt-ol-submenu").prev().removeClass("tt-ol-submenu-open");
-				$this.parent().parent().find(".tt-ol-submenu").slideUp(350);
-				$this.toggleClass("tt-ol-submenu-open");
-				$this.next().slideToggle(350);
-			}
-		}
-		return false;
-	});
+
+
 
 	// Open submenu on caret click
 	$(".tt-ol-submenu-caret-wrap").on("click", function() {
@@ -2691,7 +2695,7 @@
 	// Requires "Smooth Scrollbar" (https://github.com/idiotWu/smooth-scrollbar/blob/develop/docs/api.md#scrollbarscrollintoview)
 	// ================================================================
 
-	$('a[href^="#"]')
+	/*$('a[href^="#"]')
 		.not('[href$="#"]') // omit from selection
 		.not('[href$="#0"]') // omit from selection
 		.on("click", function() {
@@ -2708,22 +2712,9 @@
 		// You can use data attribute (for example: data-offset="100") to set top offset in HTML markup if needed. 
 		if ($(this).data("offset") != undefined) $offset = $(this).data("offset");
 		
-		if(!isMobile) { // Not for mobile devices!
-			if ($("body").hasClass("tt-smooth-scroll")) {
-				var topY = $(target).offset().top - $("#scroll-container > .scroll-content").offset().top - $offset;
-				var $scrollbar = Scrollbar.init(document.getElementById("scroll-container"));
-				gsap.to($scrollbar, { duration: 1.5, scrollTo: { y: topY, autoKill: true }, ease: Expo.easeInOut });
 
-			} else {
-				var topY = $(target).offset().top - $("body").offset().top - $offset;
-				$("html,body").animate({scrollTop: topY}, 800);
-			}
-		} else {
-			var topY = $(target).offset().top - $("body").offset().top - $offset;
-			$("html,body").animate({scrollTop: topY}, 800);
-		}
 		return false;
-	});
+	});*/
 
 
 
@@ -2745,7 +2736,37 @@
 		}
 		return false;
 	}); 
-
+	
+	$(".navi01").on("click", function() {
+		if(!isMobile) { // Not for mobile devices!
+			if ($("body").hasClass("tt-smooth-scroll")) {
+				var $scrollbar = Scrollbar.init(document.getElementById("scroll-container"));
+				gsap.to($scrollbar, { duration: 1.5, scrollTo: { y: 600, autoKill: true }, ease: Expo.easeInOut });
+			} 
+		} else {
+			$("html,body").animate({scrollTop: 500}, 800);
+		}
+	}); 
+	$(".navi02").on("click", function() {
+		if(!isMobile) { // Not for mobile devices!
+			if ($("body").hasClass("tt-smooth-scroll")) {
+				var $scrollbar = Scrollbar.init(document.getElementById("scroll-container"));
+				gsap.to($scrollbar, { duration: 1.5, scrollTo: { y: 1500, autoKill: true }, ease: Expo.easeInOut });
+			} 
+		} else {
+			$("html,body").animate({scrollTop: 1600}, 800);
+		}
+	}); 
+	$(".navi03").on("click", function() {
+		if(!isMobile) { // Not for mobile devices!
+			if ($("body").hasClass("tt-smooth-scroll")) {
+				var $scrollbar = Scrollbar.init(document.getElementById("scroll-container"));
+				gsap.to($scrollbar, { duration: 1.5, scrollTo: { y: 1900, autoKill: true }, ease: Expo.easeInOut });
+			} 
+		} else {
+			$("html,body").animate({scrollTop: 2100}, 800);
+		}
+	}); 
 
 
 	// =======================================================================================
@@ -2848,4 +2869,3 @@
 
 
 })(jQuery); 
-
