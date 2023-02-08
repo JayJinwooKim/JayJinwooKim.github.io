@@ -72,6 +72,7 @@
 /* ------------------------------------------------------------- *
  * General
 /* ------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -254,10 +255,11 @@ body {
 .blog-interactive-item::before {
 	/*font-family: 'Noto Serif KR', serif;
 	font-family: 'SUIT-Regular';*/
-	font-family: 'Pretendard-Regular';
+	font-family: 'Nanum Gothic', sans-serif;
 }
 .serif {font-family: 'Noto Serif KR', serif;}
-
+.Myeongjo {font-family: 'Nanum Myeongjo', serif;}
+.Gothic {font-family: 'Nanum Gothic', sans-serif; text-align:center;}
 /* ------------------------------------------------------------- *
  * Page transitions
 /* ------------------------------------------------------------- */
@@ -560,22 +562,24 @@ body.tt-magic-cursor #magic-cursor {
 .tt-section {
 	position: relative;
 	padding: 80px 0;
+
 }
 @media (max-width: 991px) {
 	.tt-section {
-		padding: 6% 0;
+		padding: 0% 3%;
+		margin-top:170px;
 	}
 }
 @media (max-width: 767px) {
 	.tt-section {
-		padding: 10% 0;
-		padding-left:15px;
-		padding-right:15px;
+		padding: 0% 0;
+		padding-left:3%;
+		padding-right:3%;
 	}
 }
 @media (max-width: 480px) {
 	.tt-section {
-		padding: 0% 0;
+	
 		padding-left:15px;
 		padding-right:15px;
 	}
@@ -640,6 +644,7 @@ body.tt-magic-cursor #magic-cursor {
 
 .tt-heading {
 	margin-bottom: 40px;
+	text-align: center;
 }
 @media (max-width: 991px) {
 	.tt-heading {
@@ -717,6 +722,7 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 ===================== */
 /* size xsm */
 .tt-heading.tt-heading-xsm .tt-heading-title {
+	text-align: center;
 	font-size: calc(28px + 0.1vw);
 	font-weight: bold;
 	font-weight: 400;
@@ -1478,12 +1484,12 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	text-align: start;
+	text-align: center;
 }
 .tt-ol-menu-list > li {
 	position: relative;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 @media (max-width: 767px) {
 	.tt-ol-menu-list > li {
@@ -1933,8 +1939,8 @@ body:not(.tt-boxed) .page-header-inner,
 }
 @media (max-width: 1400px) {
 	body.tt-boxed .page-header-inner.tt-wrap {
-		padding-left: 8%;
-		padding-right: 8%;
+		padding-left: 3%;
+		padding-right: 3%;
 	}
 }
 @media (max-width: 1024px) {
@@ -6031,10 +6037,11 @@ video.tt-pci-video {
 
 /* Page nav title */
 .tt-pn-title {
+	font-size: calc(28px + 0.1vw);
 	position: relative;
 	display: block;
 	left: 50%;
-	font-size: clamp(37px, 6vw, 110px);
+	
 	font-weight: bold;
 	font-weight: 500;
 	color: #FFF;
@@ -7011,7 +7018,7 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 ===================== */
 .tt-accordion-heading {
 	position: relative;
-	padding: 20px 13% 20px 0;
+	padding: 20px 0% 20px 0;
 	cursor: pointer;
 }
 .tt-accordion-item:first-child .tt-accordion-heading {
@@ -7039,14 +7046,14 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 /* Accordion heading caret */
 .tt-accordion-caret-wrap {
 	position: absolute;
-	top: 45%;
-	right: 0;
+	top: 47%;
+	right: 7px;
 	transform: translate3d(0, -50%, 0);
 }
 .tt-accordion-caret {
 	position: relative;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -7086,8 +7093,10 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 /* Accordion content 
 ===================== */
 .tt-accordion-content {
-	padding-bottom: 40px;
+	padding-bottom: 30px;
+	padding-top:30px;
 	color: #e0e0e0;
+	border-top: 1px solid rgb(125 125 125 / 40%);
 }
 .tt-accordion-content:not(.is-open) {
 	display: none;
@@ -7123,11 +7132,12 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 }
 
 .tt-accordion.tt-ac-xlg .tt-accordion-heading {
+	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 .tt-accordion.tt-ac-xlg .tt-ac-head-title {
-	font-size: calc(19px + 1.5vw);
+	font-size: calc(17px + 1.5vw);
 }
 
 .tt-accordion.tt-ac-xxlg .tt-accordion-heading {
@@ -7410,6 +7420,7 @@ figcaption.more_p {
 	position:absolute;
 	bottom:0;
 	right:0;
+	transform:rotate(0.1deg);
 }
 @media (min-width: 1025px) {
 	figcaption {
@@ -9620,26 +9631,38 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 /* public css */
 
+@media (max-width: 780px){
+	.section_02 {margin:220px 0;}
+}
+
+.intro_wrap {position:relative;  display: flex; align-items: center; justify-content: center; color:#222;}
+.intro_wrap  > div {display:block;}
+.intro_wrap p,.intro_wrap .tt-heading-title {margin-bottom:0;}
+.round_bg { position:absolute; top:50%; left:50%; padding:180px 0; transform: translate(-50%,-50%); width:82%; height:100%; margin:0 auto; border:1px solid rgb(144 144 144 / 30%);; border-radius:150px; } 
+.intro_wrap .text-gray .Gothic {font-size:17px;}
+
 #bank_num {background:none; border:none; color:#fff; outline:none !important;}
 #bank_num::selection {background:none; border:none;  outline: none !important;}
 #bank_num:foucs {  outline: none !important; }
 
-.tt-col-lg-8 .text-gray p {font-size:17px; letter-spacing: -1px;}
+.tt-col-lg-8 .text-gray p {font-size:17px; letter-spacing: -1px; text-align: center;}
 @media (max-width: 780px){
-	.bank_wrap {padding:25% 0 15% 0;}
+	.bank_wrap {}
 }
 
-.bank {font-size:17px;}
+.click_btn {position:absolute; right:0; bottom:6px; margin-top:0; font-size:12px;}
+.bank {font-size:17px; text-align: center;}
 .bank > p {margin-bottom:5px;}
 .bank.mb {margin-bottom:40px;}
 .bank #bank_num { width:150px;}
-.bank  .clip_btn {font-size: 14px;   border-radius: 3px; display: inline-block; padding: 2px 5px; cursor:pointer; transition: .4s;}
-.bank  .clip_btn:hover,.bank  .clip_btn:active {background:rgba(255,255,255,0.2); color:#fff;}
+.bank .clip_btn {width:80%; background:rgba(255,255,255,0.2); color:#fff; font-size: 14px;  border-radius: 10px; display: inline-block; padding: 3px 5px; cursor:pointer; transition: .4s;}
+.bank .clip_btn:hover,.bank  .clip_btn:active {background:rgba(255,255,255,0.2); color:#fff;}
 
 #map {margin:45px 0;}
 .map_btn {display:flex; align-items: center; justify-content: center; margin-top:20px;}
 .map_btn > div {padding:0 15px; transition: .4s;}
 .map_btn > div:hover {transform: scale(1.2);}
 .map_info {font-size:16px; letter-spacing: -1px; transform: rotate(0.1deg);}
-.map_icon {width:40px; height:40px; border-radius:5px;}
+.map_info p {font-weight:600;}
+.map_icon {width:55px; height:55px; border-radius:30px;}
 .calendar {width:40px; }
