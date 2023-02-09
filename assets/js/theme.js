@@ -2752,19 +2752,20 @@
 			if ($("body").hasClass("tt-smooth-scroll")) {
 				var $scrollbar = Scrollbar.init(document.getElementById("scroll-container"));
 				gsap.to($scrollbar, { duration: 1.5, scrollTo: { y: 2100, autoKill: true }, ease: Expo.easeInOut });
+				
 			} 
 		} else {
-			$("html,body").animate({scrollTop: 1100}, 800);
+			$("html,body").animate({scrollTop: 1400}, 800);
 		}
 	}); 
 	$(".navi03").on("click", function() {
 		if(!isMobile) { // Not for mobile devices!
 			if ($("body").hasClass("tt-smooth-scroll")) {
 				var $scrollbar = Scrollbar.init(document.getElementById("scroll-container"));
-				gsap.to($scrollbar, { duration: 1.5, scrollTo: { y: 2800, autoKill: true }, ease: Expo.easeInOut });
+				gsap.to($scrollbar, { duration: 1.5, scrollTo: { y: 3000, autoKill: true }, ease: Expo.easeInOut });
 			} 
 		} else {
-			$("html,body").animate({scrollTop: 1700}, 800);
+			$("html,body").animate({scrollTop: 2000}, 800);
 		}
 	}); 
 
