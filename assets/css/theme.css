@@ -1480,7 +1480,7 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 
 /* Overlay menu list */
 .tt-ol-menu-list {
-	display: inline-block;
+	display: block;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -1528,7 +1528,7 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 .tt-ol-menu-list > li > a,
 .tt-ol-menu-list > li > .tt-ol-submenu-trigger > a {
 	position: relative;
-	display: inline-block;
+	display: block;
 	font-size: clamp(27px, 3.2vw, 62px);
 	line-height: 1.2;
 	color: #eaeaea;
@@ -1558,7 +1558,7 @@ body:not(.is-mobile) .tt-ol-menu-list > li > .tt-ol-submenu-trigger.tt-ol-submen
 }
 .tt-ol-submenu-trigger {
 	position: relative;
-	display: inline-block;
+	display: block;
 }
 .tt-ol-submenu {
 	display: none;
