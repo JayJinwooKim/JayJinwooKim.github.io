@@ -1529,7 +1529,7 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 .tt-ol-menu-list > li > .tt-ol-submenu-trigger > a {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(32px, 3.2vw, 62px);
+	font-size: clamp(27px, 3.2vw, 62px);
 	line-height: 1.2;
 	color: #eaeaea;
 	transition: opacity 0.3s ease-in-out;
