@@ -72,7 +72,9 @@
 /* ------------------------------------------------------------- *
  * General
 /* ------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');*/
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css');
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -255,11 +257,12 @@ body {
 .blog-interactive-item::before {
 	/*font-family: 'Noto Serif KR', serif;
 	font-family: 'SUIT-Regular';*/
-	font-family: 'Nanum Gothic', sans-serif;
+	font-family: 'NanumSquare', sans-serif;
 }
 .serif {font-family: 'Noto Serif KR', serif;}
 .Myeongjo {font-family: 'Nanum Myeongjo', serif;}
-.Gothic {font-family: 'Nanum Gothic', sans-serif; text-align:center;}
+.Gothic {font-family: 'NanumSquare', sans-serif; text-align:center;}
+.bold {font-weight: 700;}
 /* ------------------------------------------------------------- *
  * Page transitions
 /* ------------------------------------------------------------- */
@@ -7039,6 +7042,7 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 /* Accordion heading subtext */
 .tt-accordion-subtext {
 	margin-top: 10px;
+	margin-right: 5px;
 	font-size: 16px;
 	font-weight: normal;
 	color: #999;
@@ -7421,7 +7425,9 @@ figcaption.more_p {
 	position:absolute;
 	bottom:0;
 	right:0;
-	transform:rotate(0.1deg);
+	font-size: 15px;
+	opacity: 1;
+/*	transform:rotate(0.1deg);*/
 }
 @media (min-width: 1025px) {
 	figcaption {
@@ -9664,6 +9670,6 @@ body:not(.tt-boxed) .tt-footer-inner,
 .map_btn > div {padding:0 15px; transition: .4s;}
 .map_btn > div:hover {transform: scale(1.2);}
 .map_info {font-size:16px; letter-spacing: -1px; transform: rotate(0.1deg);}
-.map_info p {font-weight:600;}
+.map_info p {font-weight:400; font-family: 'NanumSquare', sans-serif}
 .map_icon {width:55px; height:55px; border-radius:30px;}
 .calendar {width:40px; }
