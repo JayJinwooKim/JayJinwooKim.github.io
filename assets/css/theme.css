@@ -1533,6 +1533,7 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 	line-height: 1.2;
 	color: #eaeaea;
 	transition: opacity 0.3s ease-in-out;
+	white-space: nowrap;
 }
 
 /* Overlay menu list hover/active (master parent). Note: no effect on mobile devices! */
