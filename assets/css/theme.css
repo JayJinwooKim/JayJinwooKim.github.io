@@ -7103,7 +7103,8 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 	padding-bottom: 30px;
 	padding-top:30px;
 	color: #e0e0e0;
-	border-top: 1px solid rgb(125 125 125 / 40%);
+	border-bottom: 1px solid rgb(125 125 125 / 40%);
+	
 }
 .tt-accordion-content:not(.is-open) {
 	display: none;
@@ -7121,10 +7122,13 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	border-top: 1px solid rgb(125 125 125 / 40%);
-}
-
-.tt-accordion.tt-ac-borders .tt-accordion-item:last-child {
 	border-bottom: 1px solid rgb(125 125 125 / 40%);
+}
+.tt-accordion.tt-ac-borders .tt-accordion-heading.non {
+	border-top:none;
+}
+.tt-accordion.tt-ac-borders .tt-accordion-item:last-child {
+	
 }
 
 
@@ -9661,9 +9665,12 @@ body:not(.tt-boxed) .tt-footer-inner,
 
 .click_btn {position:absolute; right:0; bottom:6px; margin-top:0; font-size:12px;}
 .bank {font-size:17px; text-align: center;}
-.bank > p {margin-bottom:5px;}
 .bank.mb {margin-bottom:40px;}
-.bank #bank_num { width:170px;}
+.bank.mb.non {margin-bottom:0;}
+.bank_aco {display:flex; align-items: center; justify-content: center;}
+.bank_aco > div { white-space: nowrap; }
+.bank #bank_num { width:170px; text-align: center; }
+.bank .min_num {width:145px !important;}
 .bank .clip_btn {width:80%; background:rgba(255,255,255,0.2); color:#fff; font-size: 14px;  border-radius: 10px; display: inline-block; padding: 3px 5px; cursor:pointer; transition: .4s;}
 .bank .clip_btn:hover,.bank  .clip_btn:active {background:rgba(255,255,255,0.2); color:#fff;}
 
@@ -9671,7 +9678,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 .map_btn {display:flex; align-items: center; justify-content: center; margin-top:20px;}
 .map_btn > div {padding:0 15px; transition: .4s;}
 .map_btn > div:hover {transform: scale(1.2);}
-.map_info {font-size:16px; letter-spacing: -1px; transform: rotate(0.1deg); padding-left:20px;}
+.map_info {font-size:16px; letter-spacing: -1px; transform: rotate(0.1deg); padding-left:15px;}
 .map_info p {font-weight:400; font-family: 'NanumSquare', sans-serif}
 .map_icon {width:55px; height:55px; border-radius:30px;}
 .calendar {width:40px; }
