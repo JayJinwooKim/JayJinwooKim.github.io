@@ -1944,7 +1944,7 @@ body:not(.tt-boxed) .page-header-inner,
 }
 @media (max-width: 1400px) {
 	body.tt-boxed .page-header-inner.tt-wrap {
-		padding-left: 3%;
+		padding-left: 3.5%;
 		padding-right: 3%;
 	}
 }
@@ -2131,7 +2131,7 @@ body:not(.tt-boxed) .page-header-inner,
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	object-position: 50% 50%;
+	object-position:50% 20%;
 }
 
 #page-header.ph-bg-image .ph-video-wrap {
@@ -2741,6 +2741,7 @@ body.ph-share-open .scrollbar-track {
 	#page-header.ph-full .page-header-inner {
 		padding-top: 5% !important;
 		padding-bottom: 5% !important;
+	
 	}
 	#page-header.ph-full .ph-image {
 		position: absolute;
@@ -9662,7 +9663,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 .bank {font-size:17px; text-align: center;}
 .bank > p {margin-bottom:5px;}
 .bank.mb {margin-bottom:40px;}
-.bank #bank_num { width:150px;}
+.bank #bank_num { width:170px;}
 .bank .clip_btn {width:80%; background:rgba(255,255,255,0.2); color:#fff; font-size: 14px;  border-radius: 10px; display: inline-block; padding: 3px 5px; cursor:pointer; transition: .4s;}
 .bank .clip_btn:hover,.bank  .clip_btn:active {background:rgba(255,255,255,0.2); color:#fff;}
 
@@ -9670,7 +9671,7 @@ body:not(.tt-boxed) .tt-footer-inner,
 .map_btn {display:flex; align-items: center; justify-content: center; margin-top:20px;}
 .map_btn > div {padding:0 15px; transition: .4s;}
 .map_btn > div:hover {transform: scale(1.2);}
-.map_info {font-size:16px; letter-spacing: -1px; transform: rotate(0.1deg);}
+.map_info {font-size:16px; letter-spacing: -1px; transform: rotate(0.1deg); padding-left:20px;}
 .map_info p {font-weight:400; font-family: 'NanumSquare', sans-serif}
 .map_icon {width:55px; height:55px; border-radius:30px;}
 .calendar {width:40px; }
