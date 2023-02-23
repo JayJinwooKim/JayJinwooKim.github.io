@@ -9663,6 +9663,11 @@ body:not(.tt-boxed) .tt-footer-inner,
 	.bank_wrap {}
 }
 
+.text-gray2 p {font-size:15px; letter-spacing: -1px; text-align: center;}
+@media (max-width: 780px){
+	.bank_wrap {}
+}
+
 .click_btn {position:absolute; right:0; bottom:6px; margin-top:0; font-size:12px;}
 .bank {font-size:17px; text-align: center;}
 .bank.mb {margin-bottom:40px;}
